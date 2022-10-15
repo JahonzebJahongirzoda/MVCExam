@@ -1,0 +1,38 @@
+@model List<QuoteDto>
+<a class="btn btn-success" href="/quote/Add" role="button"  style="width: 100%; height: 25%;">Create</a>
+
+<div class= "container" style="display: flex; justify-content: center; flex-wrap: wrap;">
+@foreach (var quote in Model)
+{
+
+        <div class="card" style="width: 25%; height: 750%;">
+
+
+            <!-- Card image -->
+            <div class="view overlay">
+                <img class="card-img-top" src="https://cdn.pixabay.com/photo/2020/07/23/01/29/books-5430104_960_720.jpg"
+                     alt="Card image cap">
+                <a href="#!">
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+
+            <!-- Card content -->
+            <div class="card-body">
+
+                <!-- Title -->
+                <h4 class="card-title">@quote.ImageText</h4>
+                <!-- Text -->
+                <p class="card-text">@quote.QuoteText</p>
+                <!-- Button -->
+                <td>
+                    <a href="/quote/update/@quote.Id" class="btn btn-warning">Edit</a>
+                    <a href="/quote/delete/@quote.Id" class="btn btn-danger" style="margin: 10px">Delete</a> 
+                </td>
+
+            </div>
+
+        </div>
+ 
+}
+</div>

@@ -1,0 +1,16 @@
+@model Domain.Dtos.AddQuoteDto
+
+<form method="post" asp-action="Add">
+    <div class="form-group">
+        <label>Quote Text</label>
+        <input asp-for="QuoteText" type="text" class="form-control"  placeholder="Enter quote text"style="width: 50% ; height: 700%">
+        <span class="text-danger" asp-validation-for="QuoteText"></span>
+    </div>
+  <div class="form-group">
+        <label>Type of Quote</label>
+      <textarea asp-for="ImageText" class="form-control"  placeholder="Enter quote's type"style="width: 50% ; height: 700%"></textarea>
+        <span class="text-danger" asp-validation-for="ImageText"></span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary"style="background-color: green ;width: 100%; height: 700%; ">Create</button>
+</form>
